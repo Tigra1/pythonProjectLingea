@@ -11,15 +11,31 @@ html_template = '''
         <textarea id="text" name="text" rows="4" cols="50">{{ request.form.get('text', '') }}</textarea><br><br>
         <input type="submit" value="Отправить">
     </form>
-
+    <style>
+        body {
+            .table-container { 
+            display: flex; 
+            justify-content: left; 
+            margin: 2px; 
+        } 
+        }
+    </style>
     {% if results %}
         <h2>Результаты:</h2>
-        <table border="1">
-            <tr><th>EAN Code</th><th>Quantity</th></tr>
-            {% for ean, qty in results %}
-                <tr><td>{{ ean }}</td><td>{{ qty }}</td></tr>
-            {% endfor %}
-        </table>
+        <div class="table-container"> 
+            <table border="1">
+                <tr><th>EAN Code</th>
+                {% for ean in results %}
+                    <tr><td>{{ ean }}</td></tr>
+                {% endfor %}
+            </table> 
+            <table border="1">
+                <tr><th>Quantity</th></tr>
+                {% for qty in results %}
+                    <tr><td>{{ qty }}</td></tr>
+                {% endfor %}
+            </table>
+        </div>
     {% endif %}
 '''
 
