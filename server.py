@@ -49,7 +49,6 @@ def index():
         results = find_ean_and_quantity(text)
     return render_template_string(html_template, results=results)
 
-
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5000))
     app.run(host='0.0.0.0', port=port)
