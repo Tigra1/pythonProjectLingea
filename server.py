@@ -112,7 +112,7 @@ def find_ean_and_quantity(text):
     # Шаблон для поиска EAN (13-значный штрих-код)
     ean_pattern = r'\b\d{13}\b'
     # Шаблон для поиска целого количества (исключаем числа с точкой)
-    quantity_pattern = r'(?<!\d\.)\b\d{1,2}\b(?!\.\d)'
+    quantity_pattern = r'(?<![\d.])\b\d{1,2}\b(?![\d.])'
 
     # Поиск всех EAN кодов и количеств
     ean_codes = re.findall(ean_pattern, text)
