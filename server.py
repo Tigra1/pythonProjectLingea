@@ -33,7 +33,7 @@ html_template = '''
         margin-left: 5%;
         padding: 1%;
         max-width: 30%;
-    }
+    } 
     .top-menu-logo {
         margin-left: 5%;
     }
