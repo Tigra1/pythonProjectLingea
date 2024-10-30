@@ -104,7 +104,7 @@ html_template = '''
     <div class="form_container">
         <label for="text"><h2 class="text">Zadejte text s EAN kódy a množstvím:</h2></label>
         <form method="POST" class="form">
-            <textarea id="text" name="text" rows="8" cols="70">{{ request.form.get('text', '') }}</textarea><br><br>
+            <textarea id="text" name="text" rows="11" cols="70">{{ request.form.get('text', '') }}</textarea><br><br>
             <input type="submit" value="Submit" class="button">
         </form>
     </div >
